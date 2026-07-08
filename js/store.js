@@ -49,9 +49,9 @@ export function getFilteredResources(categoryId = 'all', searchQuery = '') {
   if (searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
     list = list.filter(r =>
-      r.title.toLowerCase().includes(q) ||
-      r.description.toLowerCase().includes(q) ||
-      r.url.toLowerCase().includes(q)
+      (r.title || '').toLowerCase().includes(q) ||
+      (r.description || '').toLowerCase().includes(q) ||
+      (r.url || '').toLowerCase().includes(q)
     );
   }
 
@@ -96,7 +96,8 @@ export function addResource({ title, description, url, categoryId, type }) {
 export function updateResource(id, updates) {
   const index = state.resources.findIndex(r => r.id === id);
   if (index === -1) return false;
-  state.resources[index] = { ...state.resources[index], ...updates };
+  const { id: _id, addedAt: _addedAt, ...safeUpdates } = updates;
+  state.resources[index] = { ...state.resources[index], ...safeUpdates };
   state.dirtyCount++;
   return true;
 }
@@ -116,7 +117,7 @@ export function deleteResource(id) {
  * 添加分类
  */
 export function addCategory({ id, name, icon }) {
-  if (state.categories.find(c => c.id === id)) return false;
+  if (state.categories.some(c => c.id === id)) return false;
   state.categories.push({ id, name, icon: icon || 'folder' });
   state.dirtyCount++;
   return true;
