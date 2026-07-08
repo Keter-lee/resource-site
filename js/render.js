@@ -1,4 +1,4 @@
-import { $, $$, escapeHtml, getFaviconUrl, debounce } from './utils.js';
+import { $, escapeHtml, getFaviconUrl, debounce } from './utils.js';
 import { getCategories, getFilteredResources } from './store.js';
 
 let currentCategory = 'all';
@@ -9,7 +9,7 @@ let currentSearch = '';
  */
 export function renderBrowseMode() {
   const app = $('#app');
-  const categories = getCategories();
+  const categories = getCategories() || [];
 
   app.innerHTML = `
     <header class="browse-header">
@@ -55,7 +55,7 @@ function bindBrowseEvents() {
 function renderCards() {
   const grid = $('#resourceGrid');
   const emptyState = $('#emptyState');
-  const resources = getFilteredResources(currentCategory, currentSearch);
+  const resources = getFilteredResources(currentCategory, currentSearch) || [];
 
   if (resources.length === 0) {
     grid.innerHTML = '';
