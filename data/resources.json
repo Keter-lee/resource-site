@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T09:06:46.250Z",
+  "updatedAt": "2026-07-08T09:43:46.437Z",
   "categories": [
     {
       "id": "frontend",
@@ -25,6 +25,11 @@
     {
       "id": "entertainment",
       "name": "休闲娱乐",
+      "icon": "folder"
+    },
+    {
+      "id": "ai",
+      "name": "AI网站",
       "icon": "folder"
     }
   ],
@@ -73,6 +78,105 @@
       "categoryId": "entertainment",
       "type": "link",
       "addedAt": "2026-07-08T09:06:44.305Z"
+    },
+    {
+      "id": "c6UW3Hk4",
+      "title": "GreenVideo万能视频下载",
+      "description": "支持全球众多社交网络及视频平台的视频下载",
+      "url": "https://greenvideo.cc/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:28:57.809Z"
+    },
+    {
+      "id": "zWO70up9",
+      "title": "iLovePDF",
+      "description": "一个非常好用的PDF在线编辑网站",
+      "url": "https://www.ilovepdf.com/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:30:49.895Z"
+    },
+    {
+      "id": "txwRCvGy",
+      "title": "iLoveIMG",
+      "description": "一个非常好用的图片在线编辑网站",
+      "url": "https://www.iloveimg.com/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:32:33.917Z"
+    },
+    {
+      "id": "HUAaSRgh",
+      "title": "EasyGIF",
+      "description": "一个GIF在线制作网站",
+      "url": "https://easygif.cn/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:33:56.613Z"
+    },
+    {
+      "id": "HgQj6wjk",
+      "title": "在线文件转换器",
+      "description": "一个免费的在线文件格式转换网站",
+      "url": "https://cdkm.com/cn/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:35:56.245Z"
+    },
+    {
+      "id": "AvgpPNI7",
+      "title": "证件照大师",
+      "description": "在线制作证件照",
+      "url": "https://id-photo.cn/",
+      "categoryId": "tools",
+      "type": "link",
+      "addedAt": "2026-07-08T09:36:41.554Z"
+    },
+    {
+      "id": "jbQlTQHu",
+      "title": "DeepSeek",
+      "description": "",
+      "url": "https://chat.deepseek.com/",
+      "categoryId": "ai",
+      "type": "link",
+      "addedAt": "2026-07-08T09:40:08.569Z"
+    },
+    {
+      "id": "IBzXPSXH",
+      "title": "Kimi",
+      "description": "",
+      "url": "https://www.kimi.com/zh/",
+      "categoryId": "ai",
+      "type": "link",
+      "addedAt": "2026-07-08T09:40:39.460Z"
+    },
+    {
+      "id": "bEjj4fj0",
+      "title": "豆包",
+      "description": "",
+      "url": "https://www.doubao.com/chat/",
+      "categoryId": "ai",
+      "type": "link",
+      "addedAt": "2026-07-08T09:41:10.037Z"
+    },
+    {
+      "id": "xcLWGU0l",
+      "title": "ChatGPT",
+      "description": "",
+      "url": "https://chatgpt.com/",
+      "categoryId": "ai",
+      "type": "link",
+      "addedAt": "2026-07-08T09:41:52.013Z"
+    },
+    {
+      "id": "f9QM1V01",
+      "title": "抖音",
+      "description": "由字节跳动开发的短视频平台",
+      "url": "https://www.douyin.com/",
+      "categoryId": "entertainment",
+      "type": "link",
+      "addedAt": "2026-07-08T09:43:42.363Z"
     }
   ]
 }
