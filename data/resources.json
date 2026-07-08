@@ -1,11 +1,32 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T00:00:00Z",
+  "updatedAt": "2026-07-08T09:01:26.818Z",
   "categories": [
-    { "id": "frontend", "name": "前端工具", "icon": "code" },
-    { "id": "design", "name": "设计资源", "icon": "palette" },
-    { "id": "docs", "name": "文档教程", "icon": "book" },
-    { "id": "tools", "name": "效率工具", "icon": "wrench" }
+    {
+      "id": "frontend",
+      "name": "前端工具",
+      "icon": "code"
+    },
+    {
+      "id": "design",
+      "name": "设计资源",
+      "icon": "palette"
+    },
+    {
+      "id": "docs",
+      "name": "文档教程",
+      "icon": "book"
+    },
+    {
+      "id": "tools",
+      "name": "效率工具",
+      "icon": "wrench"
+    },
+    {
+      "id": "entertainment",
+      "name": "休闲娱乐",
+      "icon": "folder"
+    }
   ],
   "resources": [
     {
@@ -43,6 +64,15 @@
       "categoryId": "docs",
       "type": "link",
       "addedAt": "2026-07-04T10:00:00Z"
+    },
+    {
+      "id": "EDAcGbhc",
+      "title": "Libvio视频站",
+      "description": "一个包含许多影视资源的视频站",
+      "url": "https://www.libvio.app/",
+      "categoryId": "entertainment",
+      "type": "link",
+      "addedAt": "2026-07-08T08:58:21.156Z"
     }
   ]
 }
