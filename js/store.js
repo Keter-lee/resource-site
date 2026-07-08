@@ -21,6 +21,10 @@ export async function loadData(source = 'data/resources.json') {
   state.categories = json.categories || [];
   state.resources = json.resources || [];
   state.dataSha = json._sha || null;
+  // 从 sessionStorage 恢复跨刷新的 SHA
+  if (!state.dataSha) {
+    state.dataSha = sessionStorage.getItem('resource_site_dataSha') || null;
+  }
   state.loaded = true;
 }
 
@@ -140,6 +144,11 @@ export function deleteCategory(id) {
  */
 export function setDataSha(sha) {
   state.dataSha = sha;
+  if (sha) {
+    sessionStorage.setItem('resource_site_dataSha', sha);
+  } else {
+    sessionStorage.removeItem('resource_site_dataSha');
+  }
 }
 
 /**

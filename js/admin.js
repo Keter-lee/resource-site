@@ -4,9 +4,12 @@ import { getState, getResource, getCategories, getDataJson,
          addCategory, deleteCategory,
          setDataSha, resetDirtyCount } from './store.js';
 
-// ⚠️ 修改此 hash 为你自己的密码。
-// 生成方式：在浏览器控制台运行 await sha256('你的密码')
-// 默认密码: "password"
+// ⚠️⚠️⚠️ 重要安全提示 ⚠️⚠️⚠️
+// 此密码仅用于防止路人随意修改，不适合保护敏感数据。
+// 任何查看页面源码的人都能绕过此验证。
+// 请立即修改默认密码：在浏览器控制台运行 await sha256('你的新密码')，
+// 然后将结果替换下面的 PASSWORD_HASH 值。
+// 当前默认密码为: "password"
 const PASSWORD_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
 
 const STORAGE_KEY_AUTH = 'resource_site_auth';
@@ -330,7 +333,8 @@ async function commitToGitHub() {
     }
 
     // 提交
-    const content = btoa(unescape(encodeURIComponent(getDataJson())));
+    const bytes = new TextEncoder().encode(getDataJson());
+    const content = btoa(String.fromCharCode(...bytes));
     const body = {
       message: `Update resources - ${new Date().toISOString()}`,
       content,
@@ -473,7 +477,7 @@ function showAdminPanel() {
                 <div class="admin-resource-info">
                   <strong>${escapeHtml(r.title)}</strong>
                   <span class="admin-meta">
-                    ${cat ? escapeHtml(cat.name) : '未分类'} · ${r.addedAt.slice(0, 10)}
+                    ${cat ? escapeHtml(cat.name) : '未分类'} · ${escapeHtml(r.addedAt.slice(0, 10))}
                   </span>
                 </div>
                 <div class="admin-resource-actions">
