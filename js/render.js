@@ -14,7 +14,7 @@ export function renderBrowseMode() {
   app.innerHTML = `
     <header class="browse-header">
       <div class="header-top">
-        <h1 class="site-title">🔗 资源站</h1>
+        <h1 class="site-title">🔗 李哥资源站</h1>
         <div class="header-actions">
           <input type="text" class="search-input" id="searchInput" placeholder="搜索资源...">
           <a href="#admin" class="admin-link">管理</a>
