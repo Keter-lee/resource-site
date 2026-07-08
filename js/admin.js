@@ -101,6 +101,18 @@ function bindAdminEvents() {
     }
   });
 
+  $('#exportBtn').addEventListener('click', () => {
+    const json = getDataJson();
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'resources.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast('JSON 文件已下载，手动替换仓库中的文件即可', 'info');
+  });
+
   $('#saveBtn').addEventListener('click', commitToGitHub);
 }
 
@@ -430,6 +442,7 @@ function showAdminPanel() {
         <h2>管理面板</h2>
         <div class="admin-header-actions">
           <span class="dirty-badge hidden" id="dirtyBadge">0 处更改</span>
+          <button class="btn btn-outline btn-sm" id="exportBtn">导出 JSON</button>
           <button class="btn btn-primary btn-sm" id="saveBtn">提交到 GitHub</button>
           <button class="btn btn-outline btn-sm" id="logoutBtn">退出</button>
         </div>
