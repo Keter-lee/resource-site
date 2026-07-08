@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T09:01:26.818Z",
+  "updatedAt": "2026-07-08T09:06:46.250Z",
   "categories": [
     {
       "id": "frontend",
@@ -66,13 +66,13 @@
       "addedAt": "2026-07-04T10:00:00Z"
     },
     {
-      "id": "EDAcGbhc",
+      "id": "wB7yy8hH",
       "title": "Libvio视频站",
       "description": "一个包含许多影视资源的视频站",
       "url": "https://www.libvio.app/",
       "categoryId": "entertainment",
       "type": "link",
-      "addedAt": "2026-07-08T08:58:21.156Z"
+      "addedAt": "2026-07-08T09:06:44.305Z"
     }
   ]
 }
