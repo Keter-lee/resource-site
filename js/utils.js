@@ -2,7 +2,7 @@
  * 生成 8 位随机 ID
  */
 export function generateId() {
-  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let id = '';
   for (let i = 0; i < 8; i++) {
     id += chars[Math.floor(Math.random() * chars.length)];
@@ -14,6 +14,7 @@ export function generateId() {
  * HTML 转义，防止 XSS
  */
 export function escapeHtml(str) {
+  if (str == null) return '';
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
@@ -49,13 +50,15 @@ export function $$(selector, parent = document) {
  */
 export function showToast(message, type = 'info') {
   const container = document.getElementById('toast-container');
+  if (!container) return;
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
   toast.textContent = message;
+  toast.style.transition = 'opacity 0.3s';
   container.appendChild(toast);
   setTimeout(() => {
     toast.style.opacity = '0';
-    toast.addEventListener('transitionend', () => toast.remove());
+    setTimeout(() => toast.remove(), 300);
   }, 3000);
 }
 
